@@ -13,8 +13,9 @@ message Feedback {
    string id = 5;
    ParkingLotType parkingLotType=6;
    bool ePay =7 ;
-
+   int64  create_timestamp =8;
 }
+
 
 enum ParkingLotType{
   UNDERGROUND = 0;
