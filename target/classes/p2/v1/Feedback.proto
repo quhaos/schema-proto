@@ -1,0 +1,26 @@
+syntax = "proto2";
+
+package p2_v1;
+
+option java_package = "com.al.cc.java.p2";
+option java_outer_classname = "FeedBackSchema";
+
+message Feedback {
+   optional int64 life_cycle_id = 1 [default=-9999];
+   optional string name = 2 [default='-9999'];
+   optional string gc_id = 3 [default='-9999'];
+   optional Gender gender = 4 [default=MALE];
+   optional string id = 5 [default='-9999'];
+   optional ParkingLotType parkingLotType=6 [default=OUTSIDE];
+   optional bool ePay =7  [default =true];
+}
+
+enum ParkingLotType{
+  UNDERGROUND = 0;
+  OUTSIDE = 1;
+}
+
+enum Gender {
+  FEMALE = 0;
+  MALE = 1;
+}
